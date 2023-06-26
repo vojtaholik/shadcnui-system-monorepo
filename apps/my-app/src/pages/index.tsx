@@ -18,7 +18,7 @@ export default function Home() {
               <CardHeader>Card</CardHeader>
             </Card>
             <pre className="text-xs overflow-auto w-96">
-              <span className="">styles/theme.ts</span>
+              <span className="opacity-60">// styles/theme.ts</span>
               <br />
               {JSON.stringify(
                 {
