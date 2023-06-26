@@ -27,9 +27,15 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   theme,
   children,
 }) => {
-  const context = {
-    ...theme,
-  };
+  const context = React.useMemo(() => {
+    return {
+      ...theme,
+    };
+  }, [theme]);
+
+  // const context = {
+  //   ...theme,
+  // };
 
   return (
     <ThemeContext.Provider value={context}>{children}</ThemeContext.Provider>
