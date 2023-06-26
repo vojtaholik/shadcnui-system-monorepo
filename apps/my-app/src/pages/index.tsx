@@ -6,25 +6,28 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-center space-y-16 p-24 ${inter.className}`}
-    >
-      <ThemeProvider theme={theme}>
-        <div className="flex flex-col items-center gap-5">
-          <span>ThemeProvider (unique per app)</span>
+    <main className="min-h-screen flex items-center justify-center">
+      <section
+        className={`max-w-screen-md w-full mx-auto grid md:grid-cols-2 gap-10 items-start justify-center p-24 ${inter.className}`}
+      >
+        <ThemeProvider theme={theme}>
+          <article className="flex flex-col items-center gap-5">
+            <span>ThemeProvider (unique per app)</span>
+            <Button>Button</Button>
+            <Card>
+              <CardHeader>Card</CardHeader>
+            </Card>
+            <pre className="text-xs">{JSON.stringify(theme, null, 2)}</pre>
+          </article>
+        </ThemeProvider>
+        <article className="flex flex-col items-center gap-5">
+          <span>Fallback</span>
           <Button>Button</Button>
           <Card>
             <CardHeader>Card</CardHeader>
           </Card>
-        </div>
-      </ThemeProvider>
-      <div className="flex flex-col items-center gap-5">
-        <span>Fallback</span>
-        <Button>Button</Button>
-        <Card>
-          <CardHeader>Card</CardHeader>
-        </Card>
-      </div>
+        </article>
+      </section>
     </main>
   );
 }

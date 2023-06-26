@@ -1,6 +1,8 @@
 import { cva } from "class-variance-authority";
 
 export const theme = {
+  card: "bg-background shadow-lg rounded-lg overflow-hidden",
+  cardHeader: "font-mono text-sm uppercase p-5",
   variants: {
     button: cva(
       "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
@@ -32,6 +34,4 @@ export const theme = {
       }
     ),
   },
-  card: "bg-background shadow-lg rounded-lg overflow-hidden",
-  cardHeader: "",
 };
