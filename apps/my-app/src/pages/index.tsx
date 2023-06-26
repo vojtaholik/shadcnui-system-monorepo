@@ -17,20 +17,6 @@ export default function Home() {
             <Card>
               <CardHeader>Card</CardHeader>
             </Card>
-            <pre className="text-xs overflow-auto w-96">
-              <span className="opacity-60">// styles/theme.ts</span>
-              <br />
-              {JSON.stringify(
-                {
-                  ...theme,
-                  variants: {
-                    button: theme.variants.button(), //.slice(0, 150),
-                  },
-                },
-                null,
-                2
-              )}
-            </pre>
           </article>
         </ThemeProvider>
         <article className="flex flex-col items-center gap-5">
